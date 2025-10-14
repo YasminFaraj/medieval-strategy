@@ -1,0 +1,1 @@
+data class StatusEfeito(val nome: String, var duracao: Int, val danoPorTurno: Int)
