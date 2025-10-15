@@ -1,6 +1,8 @@
-import kotlin.random.Random
+package Personagens
 
-public interface iPersonagem {
+import status.StatusEfeito
+
+interface iPersonagem {
     val nome: String
     var vida: Int
     var mana: Int
@@ -8,8 +10,7 @@ public interface iPersonagem {
     val destreza: Int
     val inteligencia: Int
     val efeitos: MutableList<StatusEfeito>
-
-    var estilo: EstiloDeLuta
+    var estilo: iEstiloLuta
 
     fun atacar(inimigo: iPersonagem) {
         estilo.atacar(this, inimigo)
